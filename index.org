@@ -1,0 +1,64 @@
+#+TITLE: Robot Bomb Defuser
+*NAME* : *PRATEEK SACHDEV*
+ 
+ 
+* Code Decomposition
+** Class game
+   An object of this class when initallized, sets up the startup
+   screen, and initialises the class variables. This class has the
+   following functions
+*** start():
+It displays the instruction screen.
+*** type1(),type2(),type3()
+It creates the design of *ROBOT* selected by the user...The game gives
+3 design choices to the user
+*** funckey()
+It deals with the movements of the robot.
+*** play()
+It processes the input keys and transfers the control to the funckey()
+function for the movement of the robot.
+*** robo()
+This function checks if level is successfully cleared or not . If yes
+, then it creates ine more level and calls the play() function.
+** Class selectrobo
+It initialises the select robo screen and takes input from the user ,
+the type of robot user wants to choose. There are *3 robot choices*. 
+* Advantages of program design
+  With proper use of classes, encapsulation the main function needs to
+  call on one function of both classes which in turn call other
+  functions within themselves.
+  /Systematic design which ensures proper understanding/
+* Control flow
+ The main game code resides in the =201101015_robot.py= file.This file first import all the required library .
+ Firslty an object of class game is created,initialises the =loading=
+ screen and after that start() function is called which creates the
+ instruction screen .This screen waits for some time so that one can
+ read instructions. Then the object of class select robo is created
+ which when created initialises the screen to choose the robots.Then
+ robo() function of the game class is called which in turn calls the
+ play() function and sets levels of game.
+ If =p = key is pressed it =pauses= the game by entering into a while
+ loop which breaks when =any ARROW= is pressed again.A count of 
+ bomb and diffuse codes is mainted when all diffuse codes are collected and then all bomb are collected the next level begins.
+ Flags are set accordingly to bomb and diffuse code count.If number
+ flag = =1 or 2= game ends.Pressing the =ESC= key will quit the game. 
+
+ If the player is unsuccessful, the code a
+ =SORRY YOUR GAME IS OVER= message is displayed . Otherwise, a
+ =!!!!CONGRATULATIONS YOU WIN !!!!!! message= is displayed. 
+* Extra Features
+** Freedom to choose your robot
+  - You can choose any robot from given 3 choices by pressing the
+    desired robot no. 
+**  Levels
+ -There are 3 levels in the game. 
+After completing each level, in next level there will be 3 more
+   diffuse kits , few walls in between paths.
+* Screen Shots
+** screenshot 1
+[[file:Screenshot 1.png][screenshot 1]]
+** screenshot 2
+[[file:Screenshot 2.png][screenshot 2]]
+
+
+ 
